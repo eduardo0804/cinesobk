@@ -13,19 +13,19 @@ import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 const links = [
   {
-    name: "Sobre Mí",
-    path: "/",
+    name: "Caso",
+    path: "/caso",
   },
   {
     name: "Dashboard",
     path: "/dashboard",
   },
   {
-    name: "Negocio",
-    path: "/negocio",
+    name: "Sobre Mí",
+    path: "/",
   },
   {
-    name: "Descargar Presentación",
+    name: "Presentación",
     path: "/assets/CasoNegocio/Caso Cine OBK - BCP.pdf", // Ruta del archivo PDF/ Marca este enlace como una descarga
   },
 ];
@@ -61,7 +61,7 @@ const MobileNav = () => {
                   isDashboard ? "text-primary" : "text-white"
                 }`}
               >
-                SubZero<span className="text-secondary">.</span>
+                Cines OBK<span className="text-secondary">.</span>
               </h1>
             </Link>
           </SheetClose>

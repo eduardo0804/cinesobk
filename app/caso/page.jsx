@@ -2,18 +2,18 @@ import Variables from "@/components/Variables";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 
-const Negocio = () => {
+const Caso = () => {
   return (
     <section className="h-full">
       <div className="container mx-auto h-full">
         <div className="flex flex-col justify-between items-center xl:flex-row xl:pt-8 xl:pb-24 gap-8">
           {/* Sección Izquierda */}
           <div className="text-center xl:text-left flex-1">
-            <span className="text-xl">Practicante Pre Profesional Pricing</span>
+            <span className="text-xl">Caso de Negocio</span>
             <h1 className="h1 mb-6">
-              Caso de Negocio
+              Modelo Actual
               <br />
-              <span className="text-secondary">Cines OBK</span>
+              <span className="text-secondary">Estándar</span>
             </h1>
             <p className="max-w-[800px] mb-5 text-white/80">
               La cadena de cines OBK enfrenta una rentabilidad negativa del -10%
@@ -72,4 +72,4 @@ const Negocio = () => {
   );
 };
 
-export default Negocio;
+export default Caso;

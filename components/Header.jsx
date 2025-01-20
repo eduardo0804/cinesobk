@@ -24,7 +24,7 @@ const Header = () => {
               isDashboard ? "text-primary" : "text-white"
             }`}
           >
-            Jesus<span className="text-secondary">.</span>
+            Cines OBK<span className="text-secondary">.</span>
           </h1>
         </Link>
 
