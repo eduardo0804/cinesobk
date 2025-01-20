@@ -12,8 +12,8 @@ const links = [
     path: "/dashboard",
   },
   {
-    name: "Conoceme",
-    path: "/conoceme",
+    name: "Conóceme",
+    path: "/conóceme",
   },
 ];
 
