@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { Button } from "./ui/button";
+import { FiDownload } from "react-icons/fi";
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
 import { usePathname } from "next/navigation"; // Importamos usePathname
@@ -38,10 +39,13 @@ const Header = () => {
           <Link href="/assets/CasoNegocio/Caso Cine OBK - BCP.pdf">
             <Button
               className={`${
-                isDashboard ? "bg-primary text-white" : "bg-white text-primary"
+                isDashboard
+                  ? "bg-primary text-white gap-2"
+                  : "bg-white text-primary gap-2"
               }`}
             >
-              Descargar Presentación
+              Presentación
+              <FiDownload className="text-xl" />
             </Button>
           </Link>
         </div>

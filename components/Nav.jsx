@@ -5,15 +5,15 @@ import { usePathname } from "next/navigation"; // Importamos usePathname
 const links = [
   {
     name: "Caso",
-    path: "/caso",
+    path: "/",
   },
   {
     name: "Dashboard",
     path: "/dashboard",
   },
   {
-    name: "Sobre Mí",
-    path: "/",
+    name: "Conoceme",
+    path: "/conoceme",
   },
 ];
 

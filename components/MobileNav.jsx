@@ -14,15 +14,15 @@ import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 const links = [
   {
     name: "Caso",
-    path: "/caso",
+    path: "/",
   },
   {
     name: "Dashboard",
     path: "/dashboard",
   },
   {
-    name: "Sobre Mí",
-    path: "/",
+    name: "Conoceme",
+    path: "/conoceme",
   },
   {
     name: "Presentación",
