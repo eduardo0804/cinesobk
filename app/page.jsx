@@ -19,7 +19,7 @@ const Inicio = () => {
               <br />
               <span className="text-secondary">Jesús Lázaro</span>
             </h1>
-            <p className="max-w-[500px] mb-9 text-white/80">
+            <p className="max-w-[500px] mb-5 text-white/80">
               Estudiante apasionado por el
               <span className="font-bold"> análisis de datos</span> 📊 y la
               <span className="font-bold"> innovación tecnológica</span>🚀, con

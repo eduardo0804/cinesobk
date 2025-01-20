@@ -21,8 +21,12 @@ const links = [
     path: "/dashboard",
   },
   {
-    name: "Caso de Negocio",
-    path: "/casonegocio",
+    name: "Negocio",
+    path: "/negocio",
+  },
+  {
+    name: "Descargar Presentación",
+    path: "/assets/CasoNegocio/Caso Cine OBK - BCP.pdf", // Ruta del archivo PDF/ Marca este enlace como una descarga
   },
 ];
 
@@ -65,18 +69,36 @@ const MobileNav = () => {
         <nav className="flex flex-col justify-center items-center gap-8">
           {links.map((link, index) => (
             <SheetClose asChild key={index}>
-              <Link
-                href={link.path}
-                className={`${
-                  link.path === pathname
-                    ? "text-secondary border-b-2 border-secondary"
-                    : isDashboard
-                    ? "text-primary"
-                    : "text-white"
-                } text-xl capitalize hover:text-secondary transition-all`}
-              >
-                {link.name}
-              </Link>
+              {link.download ? (
+                <a
+                  href={link.path}
+                  download
+                  className={`${
+                    link.path === pathname
+                      ? "text-secondary border-b-2 border-secondary"
+                      : isDashboard
+                      ? "text-primary"
+                      : "text-white"
+                  } text-xl capitalize hover:text-secondary transition-all`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {link.name}
+                </a>
+              ) : (
+                <Link
+                  href={link.path}
+                  className={`${
+                    link.path === pathname
+                      ? "text-secondary border-b-2 border-secondary"
+                      : isDashboard
+                      ? "text-primary"
+                      : "text-white"
+                  } text-xl capitalize hover:text-secondary transition-all`}
+                >
+                  {link.name}
+                </Link>
+              )}
             </SheetClose>
           ))}
         </nav>

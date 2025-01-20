@@ -41,7 +41,7 @@ const Header = () => {
                 isDashboard ? "bg-primary text-white" : "bg-white text-primary"
               }`}
             >
-              Descargar Caso
+              Descargar Presentación
             </Button>
           </Link>
         </div>
