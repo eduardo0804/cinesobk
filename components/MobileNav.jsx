@@ -21,22 +21,29 @@ const links = [
     path: "/dashboard",
   },
   {
-    name: "Perfil",
-    path: "/perfil",
-  },
-  {
-    name: "Proyectos",
-    path: "/proyectos",
+    name: "Caso de Negocio",
+    path: "/casonegocio",
   },
 ];
+
 const MobileNav = () => {
-  const pathname = usePathname();
+  const pathname = usePathname(); // Obtener la ruta actual
+  const isDashboard = pathname === "/dashboard"; // Verificar si estamos en el Dashboard
+
   return (
     <Sheet>
       <SheetTrigger className="flex justify-center items-center">
-        <CiMenuFries className="text-[32px] text-secondary" />
+        <CiMenuFries
+          className={`text-[32px] ${
+            isDashboard ? "text-primary" : "text-secondary"
+          }`}
+        />
       </SheetTrigger>
-      <SheetContent className="flex flex-col">
+      <SheetContent
+        className={`flex flex-col ${
+          isDashboard ? "bg-white text-primary" : "bg-primary text-white"
+        }`}
+      >
         <VisuallyHidden>
           <Dialog.DialogContent>
             <Dialog.DialogTitle></Dialog.DialogTitle>
@@ -45,8 +52,12 @@ const MobileNav = () => {
         <div className="mt-32 mb-40 text-center text-2xl">
           <SheetClose asChild>
             <Link href="/">
-              <h1 className="text-4xl font-semibold">
-                Jesús<span className="text-secondary">.</span>
+              <h1
+                className={`text-4xl font-semibold ${
+                  isDashboard ? "text-primary" : "text-white"
+                }`}
+              >
+                SubZero<span className="text-secondary">.</span>
               </h1>
             </Link>
           </SheetClose>
@@ -57,8 +68,11 @@ const MobileNav = () => {
               <Link
                 href={link.path}
                 className={`${
-                  link.path === pathname &&
-                  "text-secondary border-b-2 border-secondary"
+                  link.path === pathname
+                    ? "text-secondary border-b-2 border-secondary"
+                    : isDashboard
+                    ? "text-primary"
+                    : "text-white"
                 } text-xl capitalize hover:text-secondary transition-all`}
               >
                 {link.name}

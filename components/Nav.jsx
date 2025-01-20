@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname } from "next/navigation"; // Importamos usePathname
+
 const links = [
   {
     name: "Sobre Mí",
@@ -11,16 +12,17 @@ const links = [
     path: "/dashboard",
   },
   {
-    name: "Perfil",
-    path: "/perfil",
-  },
-  {
-    name: "Proyectos",
-    path: "/proyectos",
+    name: "Caso Negocio",
+    path: "/casonegocio",
   },
 ];
+
 const Nav = () => {
-  const pathname = usePathname();
+  const pathname = usePathname(); // Obtenemos la ruta actual
+
+  // Definimos las clases condicionales para los links
+  const isDashboard = pathname === "/dashboard";
+
   return (
     <nav className="flex gap-8">
       {links.map((link, index) => {
@@ -29,9 +31,11 @@ const Nav = () => {
             href={link.path}
             key={index}
             className={`${
-              link.path === pathname &&
-              "text-secondary border-b-2 border-secondary"
-            }
+              link.path === pathname
+                ? "text-secondary border-b-2 border-secondary"
+                : isDashboard
+                ? "text-primary"
+                : ""
             } capitalize font-medium hover:text-secondary transition-all`}
           >
             {link.name}

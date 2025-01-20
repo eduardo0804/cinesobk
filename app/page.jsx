@@ -15,7 +15,9 @@ const Inicio = () => {
               Ingeniería de Computación y Sistemas
             </span>
             <h1 className="h1 mb-6">
-              Hola Soy <span className="text-secondary">Jesús Lázaro</span>
+              Hola Yo Soy
+              <br />
+              <span className="text-secondary">Jesús Lázaro</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
               Estudiante apasionado por el
