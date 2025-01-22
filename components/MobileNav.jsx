@@ -21,8 +21,8 @@ const links = [
     path: "/dashboard",
   },
   {
-    name: "Conóceme",
-    path: "/conóceme",
+    name: "Conoceme",
+    path: "/conoceme",
   },
   {
     name: "Presentación",
